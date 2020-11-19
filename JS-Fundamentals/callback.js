@@ -67,11 +67,11 @@ getEmployee(1, (err, employee)=>{
     if(err){
         return console.log(err);
     }
-    getWage({id:1, name: 'Rodrigo'}, (err, response) =>{
+    getWage(employee, (err, response) =>{
         if(err){
             return console.log(err);
         }
-        console.log(response);
+        console.log(`Employee ${response.name} has an wage of ${response.wage}`);
     });
 });
 
